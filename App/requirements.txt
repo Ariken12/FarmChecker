@@ -1,0 +1,5 @@
+kivy
+setuptools
+cython
+buildozer
+openpyxl

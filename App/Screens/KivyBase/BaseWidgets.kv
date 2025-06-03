@@ -1,0 +1,55 @@
+
+
+<BeautyButton@Button>:
+    backgroud_normal: 'Resources/img/gradient1.jpg'
+    backgroud_image: 'Resources/img/gradient1.jpg'
+    backgroud_down: 'Resources/img/gradient1.jpg'
+    size_hint: (1, 1)
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    halign: 'center'
+    valign: 'middle'
+    opacity: 0.75
+    text_size: (self.width, None)
+
+<BeautyLabel@Label>:
+    size_hint: (1, 1)
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    halign: 'center'
+    valign: 'middle'
+    text_size: (self.width, None)
+
+<BeautySpinner@Spinner>:
+    size_hint: (1, 1)
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    halign: 'center'
+    valign: 'middle'
+    opacity: 0.75
+    text_size: (self.width, None)
+
+<BeautyEntry@TextInput>:
+    text_size: (self.width, None)
+    halign: 'center'
+    valign: 'middle'
+    size_hint: (1, 1)
+    opacity: 0.75
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    multiline: False
+
+<BeautyTextInput@TextInput>:
+    text_size: (self.width, None)
+    halign: 'center'
+    valign: 'middle'
+    size_hint: (1, 1)
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    multiline: True
+
+<RowTitle@BeautyLabel>:
+    size_hint_x: None
+    size: (self.parent.width * 0.25, 0)
+    color: 'black'
+
+<ColumnTitle@BeautyLabel>:
+    size_hint_x: None
+    size: (0, self.parent.height * 0.1)
+    text_size: (self.parent.width, None)
+    color: 'black'

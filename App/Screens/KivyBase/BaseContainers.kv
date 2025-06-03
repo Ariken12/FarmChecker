@@ -1,0 +1,18 @@
+<MyBoxLayout@BoxLayout>
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    size_hint: (1, 1)
+
+<Column@MyBoxLayout>:
+    orientation: 'vertical'
+
+<Row@MyBoxLayout>:
+    orientation: 'horizontal'
+
+<BackgroundLayout@FloatLayout>:
+    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+    size_hint: 1, 1
+    Image:
+        source: 'Resources/img/gradient.jpg'  
+        allow_stretch: True
+        keep_ratio: False
+        size: (500, 500)

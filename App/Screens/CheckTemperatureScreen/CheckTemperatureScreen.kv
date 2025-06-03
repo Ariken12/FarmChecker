@@ -1,0 +1,169 @@
+<CheckTemperatureScreen>
+    BackgroundLayout:
+        ScrollView:
+            size_hint: 1, 1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            Column:
+                size_hint_y: None
+                size: 0, (11 * self.parent.height // 10)
+                BeautyButton: 
+                    text: "Проверить"
+                    on_press: root.on_check()
+                Row:
+                    RowTitle:
+                        text: "Исследуемый обьект"
+                    Column:
+                        ColumnTitle:
+                            text: "Город"
+                        BeautySpinner:
+                            id: city_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Тип обьекта"
+                        BeautySpinner:
+                            id: object_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Температура в помещении"
+                        BeautyEntry:
+                            id: object_temperature
+                            hint_text: "Ввести"
+                    Column:
+                        ColumnTitle:
+                            text: "Разница температур"
+                        BeautyEntry:
+                            id: object_temperature
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Стены наружные"
+                    Column:
+                        ColumnTitle:
+                            text: "Конструкция"
+                        BeautySpinner:
+                            id: wall_out_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь"
+                        BeautyEntry:
+                            id: wall_out_size
+                            hint_text: "Ввести"
+                            text: '0'
+                Row:
+                    RowTitle:
+                        text: "Окна одинарные"
+                    Column:
+                        ColumnTitle:
+                            text: "Конструкция"
+                        BeautySpinner:
+                            id: glass_single_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь"
+                        BeautyEntry:
+                            id: glass_single_size
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Окна двойные"
+                    Column:
+                        ColumnTitle:
+                            text: "Конструкция"
+                        BeautySpinner:
+                            id: glass_double_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь"
+                        BeautyEntry:
+                            id: glass_double_size
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Ворота"
+                    Column:
+                        ColumnTitle:
+                            text: "Конструкция"
+                        BeautySpinner:
+                            id: gate_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Количество ворот"
+                        BeautyEntry:
+                            id: gate_count
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Двери"
+                    Column:
+                        ColumnTitle:
+                            text: "Конструкция"
+                        BeautySpinner:
+                            id: door_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Количество дверей"
+                        BeautyEntry:
+                            id: door_count
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Покрытие"
+                    Column:
+                        ColumnTitle:
+                            text: "Конструкция"
+                        BeautySpinner:
+                            id: cover_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь"
+                        BeautyEntry:
+                            id: cover_size
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Полы"
+                    Column:
+                        ColumnTitle:
+                            text: "Конструкция"
+                        BeautySpinner:
+                            id: floor_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь"
+                        BeautyEntry:
+                            id: floor_size
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: 'Животные'
+                    Column:
+                        ColumnTitle:
+                            text: "Тип животного"
+                        BeautySpinner: 
+                            id: animal_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Вес животного"
+                        BeautySpinner:
+                            id: animal_weight
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Количество животных"
+                        BeautyEntry:
+                            id: animal_count
+                            hint_text: "Ввести"
+                BeautyButton:
+                    text: "Вернуться в главное меню"
+                    on_press: root.manager.current = 'menu'
+

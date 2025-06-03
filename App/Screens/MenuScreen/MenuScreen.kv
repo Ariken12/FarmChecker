@@ -1,0 +1,24 @@
+<MenuScreen>:
+    BackgroundLayout:
+        Column:
+            BeautyLabel:
+                text: "Главное меню"
+                allow_stretch: True
+                keep_ratio: False
+                color: 'black'
+            BeautyButton:
+                text: "Проверить географию объекта"
+                on_press: root.manager.current = 'checkgeography'
+            BeautyButton:
+                text: "Проверить проветривание помещения"
+                on_press: root.manager.current = 'checkairspeed'
+            BeautyButton:
+                text: "Проверить тепловой баланс помещения"
+                on_press: root.manager.current = 'checktemperature'
+            BeautyButton:
+                text: "Проверить освещенность помещения"
+                on_press: root.manager.current='checklighting'
+            BeautyButton:
+                text: "Проверить размер навозохранилища"
+                on_press: root.manager.current = 'checkmanure'
+

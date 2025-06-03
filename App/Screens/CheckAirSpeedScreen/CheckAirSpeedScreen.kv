@@ -1,0 +1,68 @@
+<CheckAirSpeedScreen>
+    BackgroundLayout:
+        size_hint: 1, 1
+        ScrollView:
+            size_hint: 1, 1
+            Column:
+                size_hint_y: None
+                size: 0, (7 * self.parent.height // 5)
+                BeautyButton: 
+                    text: "Проверить"
+                    on_press: root.on_check()
+                Row:
+                    RowTitle:
+                        text: 'Проветривание воздуха'
+                    Column:
+                        ColumnTitle:
+                            text: 'Углекислого газа: L(CO2)'
+                        BeautyEntry:
+                            id: gas_level
+                            hint_text: 'Ввести'
+                    Column:
+                        ColumnTitle:
+                            text: 'Проветривание влажности: L(H2O)'
+                        BeautyEntry:
+                            id: water_level
+                            hint_text: 'Ввести'
+                Row:
+                    RowTitle:
+                        text: 'Животные'
+                    Column:
+                        ColumnTitle:
+                            text: 'Категория животного'
+                        BeautySpinner: 
+                            id: animal_category
+                            text: 'Выбрать'
+                    Column:
+                        ColumnTitle:
+                            text: 'Тип животного'
+                        BeautySpinner: 
+                            id: animal_type
+                            text: 'Выбрать'
+                    Column:
+                        ColumnTitle:
+                            text: 'Количество животных (для птиц масса)'
+                        BeautyEntry:
+                            id: animal_count
+                            hint_text: 'Ввести'
+                Row:
+                    RowTitle:
+                        text: 'Город обьекта'
+                    BeautySpinner:
+                        id: city
+                        text: 'Выбрать'
+                Row:
+                    RowTitle:
+                        text: 'Тип помещения для нормы углекислого газа'
+                    BeautySpinner:
+                        id: room_type_gas
+                        text: 'Выбрать'
+                Row:
+                    RowTitle:
+                        text: 'Тип помещения для нормы влажности'
+                    BeautySpinner:
+                        id: room_type
+                        text: 'Выбрать'
+                BeautyButton:
+                    text: "Вернуться в главное меню"
+                    on_press: root.manager.current = 'menu'

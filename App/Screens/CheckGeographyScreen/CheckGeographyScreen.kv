@@ -1,0 +1,38 @@
+#:include Screens/KivyBase/KivyBase.kv
+
+<CheckGeographyScreen>
+    BackgroundLayout:
+        ScrollView:
+            Column:
+                size_hint_y: None
+                size: 0, (5 * self.parent.height // 10)
+                BeautyButton: 
+                    text: "Проверить"
+                    on_press: root.on_check()
+                Row:
+                    BeautyLabel:
+                        text: "Тип вашего обьекта"
+                        text_size: (self.width, None)
+                        color: 'black'
+                    BeautySpinner:
+                        id: type_self
+                        text: "Выбрать"
+                Row:
+                    BeautyLabel:
+                        text: "Тип смежного обьекта"
+                        color: 'black'
+                    BeautySpinner:
+                        id: type_distance
+                        text: "Выбрать"  
+                Row:
+                    BeautyLabel:
+                        text: "Расстояние до географического обьекта (м)"
+                        color: 'black'
+                    BeautyEntry:
+                        id: distance
+                        hint_text: "Ввести"
+                BeautyButton:
+                    text: "Вернуться в главное меню"
+                    on_press: root.manager.current = 'menu'
+                    
+

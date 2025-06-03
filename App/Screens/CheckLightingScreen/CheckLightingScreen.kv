@@ -1,0 +1,57 @@
+<CheckLightingScreen@Screen>
+    BackgroundLayout:
+        ScrollView:
+            Column:
+                size_hint_y: None
+                size: 0, (5 * self.parent.height // 5)
+                BeautyButton: 
+                    text: "Проверить"
+                    on_press: root.on_check()
+                Row:
+                    RowTitle:
+                        text: "Комната"
+                    Column:
+                        ColumnTitle:
+                            text: "Тип комнаты"
+                        BeautySpinner:
+                            id: room_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь пола"
+                        BeautyEntry:
+                            id: room_area
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Естественное освещение"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь остекления"
+                        BeautyEntry:
+                            id: natural_size
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Искусственное освещение"
+                    Column:
+                        ColumnTitle:
+                            text: "Тип"
+                        BeautySpinner:
+                            id: artificial_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Мощность"
+                        BeautyEntry:
+                            id: artificial_power
+                            hint_text: "Ввести"
+                    Column:
+                        ColumnTitle:
+                            text: "Количество ламп"
+                        BeautyEntry:
+                            id: artificial_count
+                            hint_text: "Ввести"
+                BeautyButton:
+                    text: "Вернуться в главное меню"
+                    on_press: root.manager.current = 'menu'

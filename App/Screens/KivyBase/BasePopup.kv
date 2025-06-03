@@ -1,0 +1,24 @@
+<ResultPopup>
+    title: "Результаты проверки"
+    size_hint: (0.8, 0.8)
+    Column:
+        id: screen
+        orientation: 'vertical'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        #size: (root.width, root.height)
+        ScrollView:
+            size_hint: 1, 5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            BeautyLabel:
+                id: result
+                text: ""
+                allow_stretch: True
+                keep_ratio: False
+                color: 'black'
+                size_hint_y: None
+                valign: 'top'
+        BeautyButton:
+            text: "Закрыть"
+            size_hint_y: 1
+            on_press: root.dismiss()
+            

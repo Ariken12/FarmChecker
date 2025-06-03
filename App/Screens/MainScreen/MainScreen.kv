@@ -1,0 +1,14 @@
+<MainScreen>:
+    FloatLayout:
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        Button:
+            text: 'Начать работу'
+            on_press: root.on_button_press()
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            size: (500, 500)
+        Image:
+            source: 'Resources/img/icon2.jpg'  
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: None, None
+            size: (500, 500)

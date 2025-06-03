@@ -1,0 +1,50 @@
+<CheckManureScreen>
+    BackgroundLayout:
+        ScrollView:
+            size_hint: 1, 1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            Column:
+                size_hint_y: None
+                size: 0, (4 * self.parent.height // 5)
+                BeautyButton:
+                    text: "Проверить"
+                    on_press: root.on_check()
+                Row:
+                    RowTitle:
+                        text: "Животные"
+                    Column:
+                        ColumnTitle:
+                            text: "Тип животного"
+                        BeautySpinner:
+                            id: animal_type
+                            text: "Выбрать"
+                    Column:
+                        ColumnTitle:
+                            text: "Количество животных"
+                        BeautyEntry:
+                            id: animal_count
+                            hint_text: "Ввести"
+                Row:
+                    RowTitle:
+                        text: "Навозохранилищe"
+                    Column:
+                        ColumnTitle:
+                            text: "Плотность навоза"
+                        BeautyEntry:
+                            id: manure_density
+                            hint_text: "Ввести"
+                    Column:
+                        ColumnTitle:
+                            text: "Площадь навозохранилища"
+                        BeautyEntry:
+                            id: manure_area
+                            hint_text: "Ввести"
+                    Column:
+                        ColumnTitle:
+                            text: "Глубина навозохранилища"
+                        BeautyEntry:
+                            id: manure_depth
+                            hint_text: "Ввести"
+                BeautyButton:
+                    text: "Вернуться в главное меню"
+                    on_press: root.manager.current = 'menu'
